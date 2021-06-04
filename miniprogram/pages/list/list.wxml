@@ -1,0 +1,30 @@
+<import src="../../pages/template/list-template.wxml"/>
+
+  <swiper catchtap="carouselDetail"indicator-dots indicator-color="black" indicator-active-color="white">
+    <swiper-item>
+      <image src='../../images/detail/carousel/1.webp.jpg'data-index="0"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/detail/carousel/2.webp.jpg'data-index="1"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/detail/carousel/3.webp.jpg'data-index="2"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src='../../images/detail/carousel/4.webp.jpg'data-index="3"></image>
+    </swiper-item>
+  </swiper>
+  <view wx:for="{{listArr}}" wx:key='index'>
+    <view catchtap='toDetail' data-index='{{index}}'>
+      <template data="{{...item}}" is="listTmp"/>
+    </view>
+</view>
+<view>
+  <!-- <view class="zn-uploadimg">
+	<button type="primary" bindtap="listenerButtonPlay">播放</button>
+	<button type="primary" bindtap="listenerButtonPause">暂停</button>
+	<button type="primary" bindtap="listenerButtonSeek">设置播放进度</button>
+	<button type="primary" bindtap="listenerButtonStop">停止播放</button>
+	<button type="primary" bindtap="listenerButtonGetPlayState">获取播放状态</button>
+</view> -->
+</view>

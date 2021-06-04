@@ -1,0 +1,37 @@
+{
+  "pages": [   
+    "pages/list/list",
+    "pages/index/index",
+    "pages/movies/movies",
+    "pages/template/list-template",
+    "pages/detail/detail",
+    "pages/movieDetail/movieDetail"
+ 
+  ],
+  "requiredBackgroundModes": [
+    "autio"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#489B81",
+    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "首页",
+        "iconPath": "/images/icon/首页.png",
+        "selectedIconPath": "/images/icon/首页(1).png"
+      },
+      {
+        "pagePath": "pages/movies/movies",
+        "text": "电影频道",
+        "iconPath": "/images/icon/电影.png",
+        "selectedIconPath": "/images/icon/movie.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

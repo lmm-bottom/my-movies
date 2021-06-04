@@ -1,0 +1,28 @@
+<!-- index.wxml
+<view class="indexContainer">
+  <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+  <button open-type="getUserProfile">获取用户信息</button>
+  <text class="userName">hello{{userInfo}}</text>
+  <view catchtap="handleParent" class="goStudy">
+    <text  catchtap="handleChild">开启小程序之旅</text>
+  </view>
+</view>
+ -->
+
+ <view class="indexContainer">
+    <block wx:if="{{!hasUserInfo}}" >
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">hello{{userInfo.nickName}}</text>
+      <view catchtap="handleClick" class="goStudy">
+    <text>开启小程序之旅</text>
+  </view>
+    </block>
+  
+ 
+
+ 
+</view>
